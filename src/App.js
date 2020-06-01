@@ -19,7 +19,7 @@ class App extends React.Component {
     this.state = {
       todolist,
     }; //end of state
-  } //end of constructor
+  } //end of constructor - -
   newTask = {
     task: "",
     id: Date.now(),
