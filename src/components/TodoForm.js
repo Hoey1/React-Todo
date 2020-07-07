@@ -23,6 +23,7 @@ class TodoForm extends React.Component {
   // inside that function, call the addItem function from props
   // and pass in the item state property
   handleSubmit = (e) => {
+    // don't refresh page
     e.preventDefualt();
     this.props.addItem(this.state.item);
     this.setState({
