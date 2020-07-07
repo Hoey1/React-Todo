@@ -5,11 +5,6 @@ import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import "../src/components/styles.css";
 
-// CCR
-// GroceryList = TodoList
-// ListForm = TodoForm
-// {nothing} = Todo => This is what will be brought in to desplay everything
-
 const task = [
   {
     task: "Submit Retro",
