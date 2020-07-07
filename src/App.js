@@ -79,6 +79,25 @@ class App extends React.Component {
     });
   };
 
+  // clearCompleted = (e) => {
+  //   e.preventDefault();
+  //   const clearedArray = this.state.task.filter((task) => {
+  //     return task.completed === false;
+  //   });
+  //   this.setState({
+  //     task: clearedArray,
+  //   });
+  // };
+
+  clearCompleted = (e) => {
+    e.preventDefault();
+    this.setState({
+      task: this.state.task.filter((item) => {
+        return !item.completed;
+      }),
+    });
+  };
+
   render() {
     return (
       <div className="App">
@@ -86,10 +105,38 @@ class App extends React.Component {
           <h1>Todo List</h1>
           <TodoForm addItem={this.addItem} />
         </div>
-        <TodoList toggleItem={this.toggleItem} task={this.state.task} />
+        <TodoList
+          toggleItem={this.toggleItem}
+          task={this.state.task}
+          clearCompleted={this.clearCompleted}
+        />
       </div>
     );
   }
 }
 
 export default App;
+
+// clearCompleted = (toggleItem) => {
+
+// }
+
+// clearCompleted = e => {
+//   e.preventDefault();
+//   const stateSpread = [...this.state.task];
+//   const newState = [];
+
+// }
+
+// clearCompleted = (e) => {
+//   e.preventDefault();
+
+//   const stateCopy = [...this.state.task];
+//   const newState = [];
+//   stateCopy.map((item) => {
+//     if (item.completed === false) {
+//       newState.push(item);
+//     }
+//     this.setState({ task: newState });
+//   });
+// };

@@ -24,7 +24,7 @@ class TodoForm extends React.Component {
   // and pass in the item state property
   handleSubmit = (e) => {
     // don't refresh page
-    e.preventDefualt();
+    e.preventDefault();
     this.props.addItem(this.state.item);
     this.setState({
       item: "",
@@ -41,7 +41,7 @@ class TodoForm extends React.Component {
           value={this.state.item}
           onChange={this.handleChanges}
         />
-        <button> Add </button>
+        <button type="submit"> Add </button>
       </form>
     );
   }
